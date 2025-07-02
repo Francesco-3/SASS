@@ -1,0 +1,203 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #f4f4f4;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #007BFF;
+}
+
+.hero {
+  width: 100%;
+  background-color: #640fc5;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero .hero-text {
+  opacity: 0;
+  animation: fadeDown 0.6s ease forwards;
+  animation-delay: 0s;
+}
+
+.hero .hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .hero-text p {
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: #f4f4f4;
+}
+
+.hero .btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero .btn-group button {
+  opacity: 0;
+  animation: fadeDown 0.6s ease forwards;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero .btn-group button:nth-child(1) {
+  background-color: #0e6cff;
+  color: white;
+  animation-delay: 0.3s;
+}
+
+.hero .btn-group button:nth-child(1):hover {
+  transform: scale(1.05);
+  background-color: #0069d9;
+}
+
+.hero .btn-group button:nth-child(2) {
+  background-color: #4acf50;
+  color: white;
+  animation-delay: 0.6s;
+}
+
+.hero .btn-group button:nth-child(2):hover {
+  transform: scale(1.05);
+  background-color: #1e7e34;
+}
+
+.hero .btn-group button:nth-child(3) {
+  background-color: #ff8700;
+  color: white;
+  animation-delay: 0.9s;
+}
+
+.hero .btn-group button:nth-child(3):hover {
+  transform: scale(1.05);
+  background-color: #b76302;
+}
+
+.hero .hero-image {
+  opacity: 0;
+  animation: fadeDown 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero .hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 10px 10px 7px rgba(14, 14, 14, 0.902);
+  border: 2px solid white;
+}
+
+.grid-section {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 600px;
+}
+
+.grid-section .grid-item {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeDown 0.6s ease forwards;
+  border-radius: 30px;
+  box-shadow: 10px 10px 7px rgba(70, 68, 68, 0.902);
+}
+
+.grid-section .grid-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.grid-section .grid-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.grid-section .grid-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.grid-section .grid-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.grid-section .grid-item img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=general.css.map */
